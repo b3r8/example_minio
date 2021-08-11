@@ -10,19 +10,19 @@ def main():
         secret_key="zuf+tfteSlswRu7BJ86wekitnifILbZam1KYY3TG",
     )
 
-    # Search for 'myBucket' bucket.
-    found = client.bucket_exists("myBucket")
+    # Search for 'my-bucket' bucket.
+    found = client.bucket_exists("my-bucket")
     if not found:
-        print("Bucket 'myBucket' doesn't exists")
+        print("Bucket 'my-bucket' doesn't exists")
         return
     
     # Download object 'uploaded_requs.txt' from bucket
-    # 'myBucket' as file 'downloaded_requs.txt'.
+    # 'my-bucket' as file 'downloaded_requs.txt'.
     client.fget_object(
-        "myBucket", "uploaded_requs.txt", "downloaded_requs.txt",
+        "my-bucket", "uploaded_requs.txt", "downloaded_requs.txt",
     )
     print(
-        "object 'uploaded_requs.txt' was successfully downloaded as file 'downloaded_requs.txt' from bucket 'myBucket'"
+        "object 'uploaded_requs.txt' was successfully downloaded as file 'downloaded_requs.txt' from bucket 'my-bucket'"
     )
 
 if __name__ == "__main__":

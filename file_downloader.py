@@ -13,9 +13,8 @@ def main():
     # Search for 'myBucket' bucket.
     found = client.bucket_exists(myBucket)
     if not found:
-        client.make_bucket("myBucket")
-    else:
-        print("Bucket 'myBucket' already exists")
+        print("Bucket 'myBucket' doesn't exists")
+        return
     
     # Download object 'uploaded_requs.txt' from bucket
     # 'myBucket' as file 'downloaded_requs.txt'.

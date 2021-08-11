@@ -20,5 +20,5 @@ jobs:
         run: |
           echo 'Running file_downloader.py'
           python file_downloader.py
-          cat requs.txt
+          cat downloaded_requs.txt
       

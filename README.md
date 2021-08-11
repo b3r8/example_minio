@@ -1,2 +1,3 @@
-# example_minio
-Minio example
+# Minio example
+
+This repository contains code for a simple upload and download example using the object storage suite Minio

@@ -11,7 +11,7 @@ def main():
     )
 
     # Search for 'myBucket' bucket.
-    found = client.bucket_exists(myBucket)
+    found = client.bucket_exists("myBucket")
     if not found:
         print("Bucket 'myBucket' doesn't exists")
         return

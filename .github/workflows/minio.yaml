@@ -1,0 +1,24 @@
+name: minio-example
+on: workflow_dispatch
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+              python-version: 3.8
+      - name: install requirements
+        run: |
+          echo 'Installing requirements'
+          pip3 install -r requirements.txt
+      - name: upload
+        run: |
+          echo 'Running file_uploader.py'
+          python file_uploader.py
+      - name: download
+        run: |
+          echo 'Running file_downloader.py'
+          python file_downloader.py
+          cat requs.txt
+      

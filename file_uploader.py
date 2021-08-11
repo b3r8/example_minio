@@ -10,20 +10,20 @@ def main():
         secret_key="zuf+tfteSlswRu7BJ86wekitnifILbZam1KYY3TG",
     )
 
-    # Search for 'myBucket' bucket.
-    found = client.bucket_exists("myBucket")
+    # Search for 'my-bucket' bucket.
+    found = client.bucket_exists("my-bucket")
     if not found:
-        client.make_bucket("myBucket")
+        client.make_bucket("my-bucket")
     else:
-        print("Bucket 'myBucket' already exists")
+        print("Bucket 'my-bucket' already exists")
     
     # Upload file 'requirements.txt' to bucket
-    # 'myBucket' as object 'uploaded_requs.txt'.
+    # 'my-bucket' as object 'uploaded_requs.txt'.
     client.fput_object(
-        "myBucket", "uploaded_requs.txt", "requirements.txt",
+        "my-bucket", "uploaded_requs.txt", "requirements.txt",
     )
     print(
-        "file 'requirements.txt' was successfully uploaded as object 'uploaded_requs.txt' to bucket 'myBucket'"
+        "file 'requirements.txt' was successfully uploaded as object 'uploaded_requs.txt' to bucket 'my-bucket'"
 
     )
 
